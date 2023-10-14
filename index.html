@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +14,16 @@
     <button onclick="GetOvers()">Click me</button>
     <button onclick="Total()">Total</button>
     <button onClick="window.location.reload();">Reset</button>
+    <p id="Extras">Extra Runs </p>
+    <div id="ExtraRunBoard">0</div><button onclick="oneRunSub()">minus</button>
+    <button onclick="oneRunAdd()">wide</button>
+    <button onclick="twoRunAdd()">wide +1</button>
+    <button onclick="threeRunAdd()">wide +2</button>
+    <button onclick="fiveRunAdd()">wide +4</button>
+    <button onclick="oneRunAdd()">No ball</button>
+    <button onclick="fiveRunAdd()">No +4</button>
+    <button onclick="sevenRunAdd()">No +6</button>
+    <p id="sumResult">Total Score is 0</p>
     
     <table id="Primary_table">
         <tr>
@@ -23,84 +32,30 @@
         </tr>
         <tr>
             <td>1</td>
-            <td><select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="6">6</option>
-                <option value="w">w</option>
-                </select>
-            </td>
+            <td><input type="number" class="Score"></td>
         </tr>
         <tr>
             <td>2</td>
-            <td><select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="6">6</option>
-                <option value="w">w</option>
-                </select>
-            </td>
+            <td><input type="number" class="Score"></td>
         </tr>
         <tr>
             <td>3</td>
-            <td><select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="6">6</option>
-                <option value="w">w</option>
-                </select>
-            </td>
+            <td><input type="number" class="Score"></td>
         </tr>
         <tr>
             <td>4</td>
-            <td><select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="6">6</option>
-                <option value="w">w</option>
-                </select>
-            </td>
+            <td><input type="number" class="Score"></td>
         </tr>
         <tr>
             <td>5</td>
-            <td><select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="6">6</option>
-                <option value="w">w</option>
-                </select>
-            </td>
+            <td><input type="number" class="Score"></td>
         </tr>
         <tr>
             <td>6</td>
-            <td><select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="6">6</option>
-                <option value="w">w</option>
-                </select>
-            </td>
+            <td><input type="number" class="Score"></td>
         </tr>
     </table>
-    <p id="sumResult"></p>
+    
     
 
    <script src = "index.js"></script>
