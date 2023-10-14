@@ -1,9 +1,9 @@
+// To genrate tables on basis of Overs
 function GetOvers() {
   var input = document.querySelector("input[type='number']");
   var overs = parseFloat(input.value);
   // to check overs are wright or not 
   if (!isNaN(overs) && Number.isInteger(overs)) {
-    alert(overs);
   } else {
     alert("Enter a valid integer");
   }
@@ -15,26 +15,64 @@ function GetOvers() {
     document.body.appendChild(clonedTable);
  }
 }
+
+// to get total score
 function Total() {
-  var table = document.getElementById('Primary_table');
-  var rows = table.getElementsByTagName('tr');
-  var TotalRuns = 0;
-
-  for (var i = 1; i < rows.length; i++) {
-    var row = rows[i];
-    var select = row.querySelector('select');
-
-    if (select) {
-      var selectedIndex = select.selectedIndex;
-      var selectedOption = select.options[selectedIndex].value;
-
-      if (!isNaN(selectedOption)) {
-        TotalRuns += parseFloat(selectedOption);
-      }
+  var TotalScore = 0;
+  var scoreInputs = document.querySelectorAll(".Score");
+  var scoreArray = Array.from(scoreInputs).map(input => {
+    const value = parseInt(input.value);
+    if (!isNaN(value)) {
+      return value;
+    } else {
+      return 0; // Ignore non-integer values
     }
+  });
+  for (const score of scoreArray) {
+    TotalScore += score;
   }
-
-  var resultElement = document.getElementById('sumResult');
-  resultElement.textContent = 'Total Runs: ' + TotalRuns;
+  TotalScore=TotalScore+numberValue;
+  //to display total score
+  var sumResult = document.getElementById("sumResult");
+  sumResult.textContent = "Total Score is " + TotalScore;
 }
+
+// Get the div element by its id
+var ExtraRunBoard = document.getElementById("ExtraRunBoard"); 
+var numberValue = parseInt(ExtraRunBoard.innerHTML);
+
+function oneRunSub()
+{
+  numberValue--;
+  ExtraRunBoard.innerHTML = numberValue;
+}
+// Function to add +1 to the Extra Score
+function oneRunAdd() {
+  numberValue++;
+  ExtraRunBoard.innerHTML = numberValue;
+}
+
+function twoRunAdd() {
+  numberValue=numberValue+2; 
+  ExtraRunBoard.innerHTML = numberValue;
+}
+
+function threeRunAdd() {
+  numberValue=numberValue+3; 
+  ExtraRunBoard.innerHTML = numberValue;
+}
+
+function fiveRunAdd()
+{
+  numberValue=numberValue+5; 
+  ExtraRunBoard.innerHTML = numberValue;
+}
+
+function sevenRunAdd() {
+  numberValue=numberValue+7;
+  ExtraRunBoard.innerHTML = numberValue;
+}
+
+
+
 
