@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GullyUmpaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            GetTables();}
+    </script>
+</head>
+<body>
+    <h1>GullyUmpaire</h1>
+    <button onclick="SecondTotal()">Total</button>
+    <button><a href="index.html">Reset</a></button>
+    <p id="Extras">Extra Runs </p>
+    <div id="ExtraRunBoard">0</div><button onclick="oneRunSub()">minus</button>
+    <button onclick="oneRunAdd()">wide</button>
+    <button onclick="twoRunAdd()">wide +1</button>
+    <button onclick="threeRunAdd()">wide +2</button>
+    <button onclick="fiveRunAdd()">wide +4</button>
+    <button onclick="oneRunAdd()">No ball</button>
+    <button onclick="fiveRunAdd()">No +4</button>
+    <button onclick="sevenRunAdd()">No +6</button>
+    <button onclick="RemainigScore()">Required</button>
+
+    <p id="sumResult">Total Score is 0</p>
+    <p>Required Score is</p>
+    <div id="Required">0</div>
+    <p>Target is</p>
+    <div id="Target">0</div>
+    
+    <table id="Primary_table">
+        <tr>
+            <th>Balls</th>
+            <th>Runs</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="number" class="Score"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="number" class="Score"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="number" class="Score"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="number" class="Score"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="number" class="Score"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><input type="number" class="Score"></td>
+        </tr>
+    </table>
+    
+    
+
+   <script src = "index.js"></script>
+</body>
+</html>
