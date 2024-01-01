@@ -2,20 +2,53 @@
 function GetOvers() {
   var input = document.querySelector("input[type='number']");
   var overs = parseFloat(input.value);
-  // to check overs are wright or not 
+
+  // To check overs are right or not
   if (!isNaN(overs) && Number.isInteger(overs)) {
     localStorage.setItem('overs', overs);
   } else {
     alert("Enter a valid integer");
   }
 
-  //creat tables 
+  // Create and append tables inside the respective container
+  var container = document.getElementById('firstContainer'); // Change 'firstContainer' to 'secondContainer' for the second div
   for (let i = 1; i < overs; i++) {
-    var first_table = document.getElementById('Primary_table');
-    var clonedTable = first_table.cloneNode(true);
-    document.body.appendChild(clonedTable);
+    var clonedTable = document.createElement('table');
+    clonedTable.className = 'table table-hover table-bordered';
+    clonedTable.innerHTML = `
+      <tr>
+        <th>Balls</th>
+        <th>Runs</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><input type="number" class="Score"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><input type="number" class="Score"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><input type="number" class="Score"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><input type="number" class="Score"></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><input type="number" class="Score"></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><input type="number" class="Score"></td>
+      </tr>
+    `;
+    container.appendChild(clonedTable);
   }
 }
+
 
 // to get total score
 function Total() {
@@ -77,16 +110,26 @@ function sevenRunAdd() {
 }
 
 function GetTables() {
-  //creat tables 
+  // Get the number of overs from local storage
   var overs = parseFloat(localStorage.getItem('overs'));
+
+  // Get the container where tables will be appended
+  var container = document.getElementById('firstContainer');
+
+  // Loop to create and append tables
   for (let i = 1; i < overs; i++) {
+    // Clone the table
     var first_table = document.getElementById('Primary_table');
     var clonedTable = first_table.cloneNode(true);
-    document.body.appendChild(clonedTable);
+
+    // Append the cloned table to the container
+    container.appendChild(clonedTable);
   }
+
+  // Set the Target runs
   var Target = parseFloat(localStorage.getItem('Target'));
   var TargetRuns = document.getElementById("Target");
-  TargetRuns.innerHTML = Target
+  TargetRuns.innerHTML = Target;
 }
 
 
