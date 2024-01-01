@@ -1,22 +1,10 @@
 
-#ExtraRunBoard {
-    height: 20px;
-    width: 20px;
-    border: 1px solid black; 
-    background-color: lightgray; 
-}
-
-#Target {
-    height: 20px;
-    width: 20px;
-    border: 1px solid black; 
-    background-color: lightgray; 
-}
-
-#Required
+.name
 {
-    height: 20px;
-    width: 20px;
-    border: 1px solid black; 
-    background-color: lightgray; 
+    background-color: #748E63;;
+    color: #F9B572;
+}
+h1
+{
+    font-size: 5.625rem;
 }
