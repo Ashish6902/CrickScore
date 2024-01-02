@@ -1,10 +1,25 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Seymour+One&display=swap');
 
-.name
-{
-    background-color: #748E63;;
+.name {
+    font-family: 'Seymour One', sans-serif;     
+    font-weight: 800;
+    background-color: #748E63;
     color: #F9B572;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
 }
-h1
+
+.name h1
 {
-    font-size: 5.625rem;
+    font-size: auto ;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
+.btn.btn-danger a {
+    text-decoration: none ;
+    outline: none ;
+    color: inherit;
+}
+
