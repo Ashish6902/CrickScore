@@ -23,3 +23,17 @@
     color: inherit;
 }
 
+
+#firstContainer{
+    background-color: #FFFFEC;
+    padding-top: 10px;
+}
+
+body{
+    background-color: #F1E4C3 !important ;
+}
+
+button{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
