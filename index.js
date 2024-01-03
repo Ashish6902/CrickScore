@@ -155,6 +155,7 @@ function SecondTotal() {
 
 
 function RemainigScore() {
+  SecondTotal();
   var Targetscore = document.getElementById("Target");
   var TargetNum = parseInt(Targetscore.innerHTML);
 
